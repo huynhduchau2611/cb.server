@@ -1,0 +1,35 @@
+module.exports = {
+  parser: '@typescript-eslint/parser',
+  parserOptions: {
+    ecmaVersion: 2020,
+    sourceType: 'module',
+  },
+  plugins: ['@typescript-eslint'],
+  extends: [
+    'eslint:recommended',
+  ],
+  root: true,
+  env: {
+    node: true,
+    jest: true,
+    es6: true,
+  },
+  ignorePatterns: ['.eslintrc.js', 'dist/', 'node_modules/'],
+  rules: {
+    'prefer-const': 'error',
+    'no-var': 'error',
+    'no-console': ['warn', { allow: ['warn', 'error'] }],
+    'eqeqeq': ['error', 'always'],
+    'curly': ['error', 'all'],
+    'brace-style': ['error', '1tbs'],
+    'comma-dangle': ['error', 'always-multiline'],
+    'semi': ['error', 'always'],
+    'quotes': ['error', 'single', { avoidEscape: true }],
+    'indent': ['error', 2],
+    'no-trailing-spaces': 'error',
+    'eol-last': 'error',
+    'no-unused-vars': 'off',
+    '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
+    '@typescript-eslint/no-explicit-any': 'warn',
+  },
+};
